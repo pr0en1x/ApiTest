@@ -17,18 +17,18 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 public class Example {
 
     @JsonProperty("all")
-    private List<All> all = null;
+    private List<Fact> fact = null;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     @JsonProperty("all")
-    public List<All> getAll() {
-        return all;
+    public List<Fact> getFacts() {
+        return fact;
     }
 
     @JsonProperty("all")
-    public void setAll(List<All> all) {
-        this.all = all;
+    public void setFact(List<Fact> fact) {
+        this.fact = fact;
     }
 
     @JsonAnyGetter
