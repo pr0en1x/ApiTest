@@ -1,3 +1,4 @@
+import io.qameta.allure.Description;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import requests.Deserialize;
@@ -5,8 +6,8 @@ import requests.Deserialize;
 public class ApiTest {
 
     @Test()
+    @Description(value = "Тест проверяет, что Kasimir Shulz написал больше всех фактов")
     public void KasimirShulzWroteMaxFacts() {
-            Assert.assertEquals("Kasimir Shulz",
-                    Deserialize.maxFacts().getName());
+            Assert.assertEquals(Deserialize.maxFacts().getName(), "Kasimir Shulz");
     }
 }
